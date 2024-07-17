@@ -2,6 +2,7 @@
 import './App.css';
 import About from './Components/about/about';
 import ColorInput from './Components/Color2/ColorInput';
+import ContionalRen from './Components/ContionRendering/ContionalRen';
 import Hero from './Components/Hero/Hero';
 import Navbar from './Components/navbar/Navbar';
 import Proms from './Components/probs/Proms';
@@ -16,6 +17,7 @@ function App() {
       <SwitchTheme/>
       <Proms/>
       <ColorInput/>
+      <ContionalRen/>s
     </div>
   );
 }
