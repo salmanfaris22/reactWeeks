@@ -12,8 +12,13 @@
 button{
     padding: 10px;
     margin-left: 2px;
-    background: #000;
+    background: #048717;
     color: white;
+    border: #048717;
     border-radius: 10px;
     
+}
+
+button:hover{
+    background: #036211;
 }

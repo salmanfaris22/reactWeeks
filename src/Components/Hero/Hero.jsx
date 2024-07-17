@@ -36,7 +36,7 @@ const Hero = () => {
       </div>
       <div>
         <h1>{age}</h1>
-        <button onClick={ageNow}>Name</button>
+        <button onClick={ageNow}>Age</button>
       </div>
    <div>
       <h1>{employ ?  "yes":"no"}</h1>
