@@ -1,0 +1,9 @@
+.about-main{
+    height: 100vh;
+    background: #e1e1e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 40px;
+}
