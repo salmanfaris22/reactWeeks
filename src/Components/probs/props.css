@@ -1,0 +1,22 @@
+.props-main{
+display: flex;
+
+justify-content: center;
+  gap: 30px;
+
+
+}
+
+.box{
+    border: 1px solid black;
+    width: 50%;
+}
+
+.pro-main{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    gap: 30px;
+    justify-content: center;
+
+}
