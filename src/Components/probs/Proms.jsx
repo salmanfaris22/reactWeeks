@@ -2,12 +2,19 @@ import React from 'react'
 import './props.css'
 import Props from './props'
 const Proms = () => {
+ 
+    const person = [
+        {name : "salman",age:34, isStudnet:true},
+        {name : "salman",age:34, isStudnet:true},
+        {name : "salman",age:34, isStudnet:true},
+        {name : "salman",age:34, isStudnet:true}
+    ]
+
   return (
     <div className='pro-main'>
         
-        <Props name="jasim" age={29} isStudnet={false} />
-        <Props name="sian" age={9} isStudnet={true} />
-        <Props name="lalu" age={19} isStudnet={true} />
+        <Props person={person}/>
+
     
     </div>
   )

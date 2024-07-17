@@ -2,14 +2,19 @@ import React from 'react'
 import './props.css'
 
  
-const Props = (props) => {
+const Props = ({person}) => {
   return (
     <div className='props-main'>
-         <div className='box'>
-             <h1>Name : {props.name}</h1>
-             <h3>Age : {props.age}</h3>
-             <h3>Students : {props.isStudnet ? "yes":"no"}</h3>
-         </div>
+        {person.map((item)=>{
+               return(
+                <div className='box'>
+                    <h1>{item.name}</h1>
+                    <h3>{item.age}</h3>
+                    <h3>{item.isStudnet ? "yes":"no"}</h3>
+                </div>
+               )
+        })}
+        
     </div>
   )
 }
