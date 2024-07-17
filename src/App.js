@@ -1,6 +1,7 @@
 
 import './App.css';
 import About from './Components/about/about';
+import ColorInput from './Components/Color2/ColorInput';
 import Hero from './Components/Hero/Hero';
 import Navbar from './Components/navbar/Navbar';
 import Proms from './Components/probs/Proms';
@@ -14,6 +15,7 @@ function App() {
       <About/>
       <SwitchTheme/>
       <Proms/>
+      <ColorInput/>
     </div>
   );
 }
