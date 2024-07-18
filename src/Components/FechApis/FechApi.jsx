@@ -1,30 +1,31 @@
 
 import React, { useEffect, useState } from 'react'
-
+import "./fetch.css"
 const FechApi = () => {
 
     const [post , setPost] =useState([])
 
 
     useEffect(()=>{
-        fetch('https://jsonplaceholder.typicode.com/posts ')
+        fetch('https://dummyjson.com/quotes')
         .then((data)=>data.json())
-        .then((data)=> setPost(data.splice(0,10)))
+        .then((data)=> data.quotes)
+        .then((data)=>setPost(data.splice(0,10)))
     },[])
  
   return (
     <div style={{}}>FechApi
     <div>
-        {
-            post.map((data)=>{
-                return (
-                    <div style={{background:"black",color:"white"}} key={data.id}>
-                        <h1>{data.title}</h1>
-                        <p>{data.body}</p>
-                    </div>
-                )
-            })
-        }
+       {
+        post.map((list)=>{
+            return(
+                <div key={list.id} className='box-fech'>
+                    <h1>{list.quote}</h1>
+                    <h3 className='f-text'>{list.author}</h3>
+                </div>
+            )
+        })
+       }
     </div>
     </div>
   )

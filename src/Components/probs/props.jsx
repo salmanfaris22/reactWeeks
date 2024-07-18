@@ -7,7 +7,7 @@ const Props = ({person}) => {
     <div className='props-main'>
         {person.map((item)=>{
                return(
-                <div className='box'>
+                <div key={item.id} className='box'>
                     <h1>{item.name}</h1>
                     <h3>{item.age}</h3>
                     <h3>{item.isStudnet ? "yes":"no"}</h3>

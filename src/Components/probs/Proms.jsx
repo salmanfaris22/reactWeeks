@@ -4,10 +4,10 @@ import Props from './props'
 const Proms = () => {
  
     const person = [
-        {name : "salman",age:34, isStudnet:true},
-        {name : "jasim",age:94, isStudnet:false},
-        {name : "salman",age:34, isStudnet:true},
-        {name : "salman",age:34, isStudnet:true}
+        {id:1,name : "salman",age:34, isStudnet:true},
+        {id:2, name : "jasim",age:94, isStudnet:false},
+        {id:3,name : "salman",age:34, isStudnet:true},
+        {id:4,name : "salman",age:34, isStudnet:true}
     ]
 
   return (
