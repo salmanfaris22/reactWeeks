@@ -10,11 +10,13 @@ import Key from './Components/Key/Key';
 import Navbar from './Components/navbar/Navbar';
 import Proms from './Components/probs/Proms';
 import SwitchTheme from './Components/SwitchTheme/SwitchTheme';
+import Textin from './Components/Textin';
 import UserRef from './Components/userRef/UserRef';
 
 function App() {
   return (
     <div className="App">
+      {/* <Textin name="jasim" age={3} st={true}/> */}
     <Navbar/>
       <Hero/>
       <About/>
@@ -26,6 +28,9 @@ function App() {
       <Events/>
       <FechApi/>
       <UserRef/>
+    
+      
+
     </div>
   );
 }

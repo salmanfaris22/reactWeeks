@@ -10,6 +10,7 @@ function openNav(){
     setIsOpen(!isOpen)
 }
 
+
     return(
        <div >
         { isOpen && <div  className="nabar-main">
