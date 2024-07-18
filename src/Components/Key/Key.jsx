@@ -15,7 +15,7 @@ const [qtys, setQyts] = useState(items)
 let onChange = (id)=>{
   let newItem =   qtys.map((ite)=>{
         return (
-            ite.qty<ite.left ? ite.id === id ? {...ite, qty: ite.qty+1} : ite : ite
+            ite.qty<ite.left ? ite.id === id ? {...ite, qty: ite.qty+1} : ite : ite 
         )
     })
    setQyts(newItem) 

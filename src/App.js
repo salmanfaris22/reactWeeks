@@ -3,6 +3,7 @@ import './App.css';
 import About from './Components/about/about';
 import ColorInput from './Components/Color2/ColorInput';
 import ContionalRen from './Components/ContionRendering/ContionalRen';
+import Events from './Components/Events/Events';
 import Hero from './Components/Hero/Hero';
 import Key from './Components/Key/Key';
 import Navbar from './Components/navbar/Navbar';
@@ -20,6 +21,7 @@ function App() {
       <ColorInput/>
       <ContionalRen/>
       <Key/>
+      <Events/>
     </div>
   );
 }
