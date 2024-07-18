@@ -5,9 +5,9 @@ import React, { useState } from 'react'
 const Key = () => {
 
 const items= [
-    {id:1,name:"Hp",price:2000,qty:1},
-    {id:2,name:"Dell",price:1000,qty:1},
-    {id:3,name:"lap",price:1090,qty:1},
+    {id:1,name:"Hp",price:2000,qty:1 ,left:10},
+    {id:2,name:"Dell",price:1000,qty:1,left:2},
+    {id:3,name:"lap",price:1090,qty:1,left:7},
 ]
 
 const [qtys, setQyts] = useState(items)
@@ -15,7 +15,7 @@ const [qtys, setQyts] = useState(items)
 let onChange = (id)=>{
   let newItem =   qtys.map((ite)=>{
         return (
-            ite.id === id ? {...ite, qty: ite.qty+1} : ite
+            ite.qty<ite.left ? ite.id === id ? {...ite, qty: ite.qty+1} : ite : ite
         )
     })
    setQyts(newItem) 
@@ -24,7 +24,8 @@ let onChange = (id)=>{
 let onChanges = (id)=>{
     let newItem =   qtys.map((ite)=>{
           return (
-              ite.id === id ? {...ite, qty: ite.qty-1} : ite
+               ite.qty>0 ? ite.id === id ? {...ite, qty: ite.qty-1} : ite : ite
+              
           )
       })
      setQyts(newItem) 
