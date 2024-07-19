@@ -6,7 +6,7 @@ const [counter, setCounter] =useState(0)
 
 function countFive(){
    for(let i=0;i<5;i++){
-       setCounter(set=>set+1)
+       setCounter((pre)=>pre+1)
    }
 }
 
