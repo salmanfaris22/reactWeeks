@@ -54,10 +54,10 @@ const Todo = () => {
     }
 
     return (
-        <div className='flex flex-col  h-[100vh]'>
-            <div className='w-[100%] h-[20%] bg-orange-200 rounded-xl flex flex-col justify-center items-center'>
+        <div className='flex flex-col  h-[100vh] bg-[#101820]'>
+            <div className='w-[100%] h-[20%] rounded-xl flex flex-col justify-center items-center'>
                 <div>
-                    <input type="text" className=' p-3 w-[600px] rounded-xl'
+                    <input type="text" className=' p-3 w-[600px] shadow-sm shadow-black rounded-xl'
                         name='data'
                         // value={getData} 
                         onChange={handleChange}
@@ -67,7 +67,7 @@ const Todo = () => {
                         autoFocus
                     />
                     {
-                        editIndex === null ? <button onClick={handleGetData} className='ml-4'
+                        editIndex === null ? <button onClick={handleGetData} className='ml-4 bg-white text-black font-bold'
                             type='submit'
                         >ADD</button> :
                             <button onClick={() => handleEditData()} className='ml-4'
@@ -81,13 +81,13 @@ const Todo = () => {
 
             <div>
 
-                <div className=' w-[100%] h-[500px] grid items-center grid-rows-2 grid-flow-col' >
+                <div className='w-[100%] h-[500px] grid items-center grid-rows-2 bg-[#101822] grid-flow-col' >
                     {
                         task.map((e, index) => {
                             return (
 
 
-                                <div key={index} className='w-[300px] h-[200px]  ml-10 flex flex-col justify-between items-center rounded-xl shadow-md shadow-black'>
+                                <div key={index} className='w-[300px] h-[200px] bg-[#ffffff] ml-10 flex flex-col justify-between items-center rounded-xl shadow-xl shadow-black'>
                                     <div className='w-[200px] mt-6 h-[130px]'>
                                         {e}
                                     </div>
@@ -95,10 +95,10 @@ const Todo = () => {
                                         <button className='h-5 flex rounded  shadow-sm shadow-black bg-black font-extralight justify-center items-center'
                                             onClick={() => deletTask(index)}
                                         >Delet</button>
-                                       <button className='h-5 flex rounded  shadow-sm shadow-black bg-black font-extralight justify-center items-center'
-                                        onClick={() => handleEdite(index)}>Edit</button>
-                                       <button className='h-5 flex rounded  shadow-sm shadow-black bg-black font-extralight justify-center items-center'
-                                        onClick={() => handleCompleat(index)}>Compleat</button>
+                                        <button className='h-5 flex rounded  shadow-sm shadow-black bg-black font-extralight justify-center items-center'
+                                            onClick={() => handleEdite(index)}>Edit</button>
+                                        <button className='h-5 flex rounded  shadow-sm shadow-black bg-black font-extralight justify-center items-center'
+                                            onClick={() => handleCompleat(index)}>Compleat</button>
                                     </div>
                                 </div>
 
@@ -117,15 +117,22 @@ const Todo = () => {
                 </div>
 
             </div>
-            {
-                doneTask.map((done, did) => {
-                    return (
-                        <div key={did}>
-                            <div>{done}</div>
-                        </div>
-                    )
-                })
-            }
+            <br />
+            <div className='ml-9 mt-10 text-2xl font-bold text-white'>Compleated TASK</div>
+            <br />
+
+            <div className=' w-[100%] h-[450px] grid items-center grid-rows-5 grid-flow-col' >
+                {
+                    doneTask.map((done, did) => {
+                        return (
+                            <div key={did} className='flex justify-center items-center ml-5 w-[400px] h-[50px] mt-2  bg-[#ffffff] rounded-md shadow-sm shadow-black'
+                            >{done}</div>
+                        )
+                    })
+                }
+
+            </div>
+
         </div>
     )
 }
