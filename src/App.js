@@ -14,12 +14,13 @@ import Textin from './Components/Textin';
 import PrevState from './Components/userRef/PrevState';
 import UserRef from './Components/userRef/UserRef';
 import ValidFrom from './Components/ValidFrom/ValidFrom';
+import ValidFromMyself from './Components/ValidFrom/ValidFromMyself';
 
 function App() {
   return (
     <div className="App">
       {/* <Textin name="jasim" age={3} st={true}/> */}
-    <Navbar/>
+    {/* <Navbar/>
       <Hero/>
       <About/>
       <SwitchTheme/>
@@ -30,9 +31,9 @@ function App() {
       <Events/>
       <FechApi/>
       <UserRef/>
-     <PrevState/>
-     <ValidFrom/>
-      
+     <PrevState/> */}
+   
+      <ValidFromMyself/>
 
     </div>
   );

@@ -67,7 +67,7 @@ const ValidFrom = () => {
             <p>{formError.email}</p>
           </div>
           <div>
-            <label>Password</label> <input type="mail" className='border' name='password' placeholder='Password'
+            <label>Password</label> <input   type="text" className='border' name='password' placeholder='Password'
             value={formValue.password}
             onChange={handleChange}
             />
@@ -83,4 +83,3 @@ const ValidFrom = () => {
   )
 }
 
-export default ValidFrom
