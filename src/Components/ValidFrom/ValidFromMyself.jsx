@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Logout from './logout'
+import From from './From'
 
 const ValidFromMyself = () => {
 
@@ -47,6 +48,23 @@ const ValidFromMyself = () => {
     }
     if(!values.password){
       error.password = "Password Requed....!"
+    }else if(values.password.length<=4){
+         error.password = `pleas try  
+         les than 4 charechter`
+    }else if(values.password){
+       let pas=values.password.split("")
+    
+       let num=1
+       for(let i of pas){
+           if(i===i.toUpperCase()){
+               num=num+1
+           }
+       }
+       if(num===1){
+         error.password = "you have must Capitel Letter"
+       }
+       
+       console.log(num);
     }
   
      return error
@@ -55,45 +73,10 @@ const ValidFromMyself = () => {
 
     return (
         <div className='h-[100vh] flex flex-col items-center justify-center bg-slate-400'>
-          {open ? <Logout log={open} setLog={isOpen}/> :<div> <pre>{JSON.stringify(getVelue,undefined,2)}</pre>
-            <div className=''>
-                <form onSubmit={handleSubmit} className='h-[600px] bg-stone-100 rounded-lg shadow-black shadow-md w-[400px] flex flex-col items-center justify-center gap-8' >
-                    <div className='flex flex-col gap-3'>
-                        <label className='font-thin'>UserName : </label>
-                        <input type="text" name='username' placeholder='UserName' value={getVelue.username}
-                            className='w-[250px] h-[30px] rounded-md  p-4 '
-
-                            onChange={handeleChanje}
-
-                        />
-                       <p className='text-red-600 text-xs'>{fromError.username}</p>
-                    </div>
-
-                    <div className='flex gap-3 flex-col'>
-                        <label className='font-thin'>Email : </label>
-                        <input type="email" name='email' placeholder='Email' value={getVelue.email}
-                            className='w-[250px] h-[30px] rounded-md  p-4 '
-                            onChange={handeleChanje}
-
-                        />
-                             <p className='text-red-600 text-xs'>{fromError.email}</p>
-                    </div>
-
-
-                    <div className='flex gap-3 flex-col '>
-                        <label className='font-thin'>Password : </label>
-                        <input   type="password" name='password' placeholder='Passowrd' value={getVelue.password}
-                            className='w-[250px] h-[30px] rounded-md  p-4 '
-                            onChange={handeleChanje}
-                        />
-                          <p className='text-red-600 text-xs'>{fromError.password}</p>
-                    </div>
-
-                    <div>
-                        <button className='p-1 h-8 w-28 bg-blue-400 text-white font-thin rounded-xl text-center '>Submit</button>
-                    </div>
-                </form>
-            </div></div>}
+          {open ? <Logout log={open} setLog={isOpen}/> :<From handleSubmit={handleSubmit} getVelue={getVelue}
+          handeleChanje={handeleChanje} fromErrorusername={fromError.username} fromErroremail={fromError.email}
+          fromErrorpassword={fromError.password}
+          />}
         </div>
     )
 }

@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       {/* <Textin name="jasim" age={3} st={true}/> */}
-    {/* <Navbar/>
+    <Navbar/>
       <Hero/>
       <About/>
       <SwitchTheme/>
@@ -31,7 +31,7 @@ function App() {
       <Events/>
       <FechApi/>
       <UserRef/>
-     <PrevState/> */}
+     <PrevState/>
    
       <ValidFromMyself/>
 
