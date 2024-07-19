@@ -11,7 +11,9 @@ import Navbar from './Components/navbar/Navbar';
 import Proms from './Components/probs/Proms';
 import SwitchTheme from './Components/SwitchTheme/SwitchTheme';
 import Textin from './Components/Textin';
+import PrevState from './Components/userRef/PrevState';
 import UserRef from './Components/userRef/UserRef';
+import ValidFrom from './Components/ValidFrom/ValidFrom';
 
 function App() {
   return (
@@ -28,7 +30,8 @@ function App() {
       <Events/>
       <FechApi/>
       <UserRef/>
-    
+     <PrevState/>
+     <ValidFrom/>
       
 
     </div>
