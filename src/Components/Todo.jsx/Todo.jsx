@@ -76,11 +76,11 @@ const Todo = () => {
     }
 
     return (
-        <div className='flex flex-col  h-[100vh] bg-[#101820]'>
+        <div className='flex flex-col  h-[100vh] bg-[#ADBBDA]'>
             <div className='w-[100%] h-[20%] rounded-xl flex flex-col justify-center items-center'>
                 <div>
                     {/* input felid */}
-                    <input type="text" className=' p-3 w-[600px] shadow-sm shadow-black rounded-xl'
+                    <input type="text" className=' p-3 w-[600px] shadow-sm shadow-black bg-[#EDE8F5] border border-[#EDE8F5] rounded-xl'
                         name='data'
                         // value={getData} 
                         onChange={handleChange}
@@ -91,14 +91,14 @@ const Todo = () => {
                     />
                     {/* ADD EDIT BUTTON */}
                     {
-                        editIndex === null ? <button onClick={handleGetData} className='ml-4 bg-white text-black font-bold'
+                        editIndex === null ? <button onClick={handleGetData} className='ml-4 bg-[#7091E6] hover:bg-[#3D52A0] text-white font-bold'
                             type='submit'
                         >ADD</button> :
-                            <button onClick={() => handleEditData()} className='ml-4'
+                            <button onClick={() => handleEditData()} className='ml-4 bg-[#7091E6] hover:bg-[#3D52A0] text-white font-bold'
                                 type='edit'
                             >Eidit</button>
                     }
-                    <button className=' absolute right-0  bg-black' onClick={handelDeletOpen}>DeletedTasks</button>
+                    <button className=' absolute right-0  bg-[#7091E6] hover:bg-[#3D52A3]' onClick={handelDeletOpen}>DeletedTasks</button>
                     <div className='absolute right-0 '>
                         {/* deleted BOX DOTOS */}
                         {deletOpen && <DeletedTasks deletedTask={deletedTask} handelRestoreTask={handelRestoreTask}/>}
@@ -112,23 +112,23 @@ const Todo = () => {
 
             <div>
 {/* TODO main Aded ToDO lists */}
-                <div className='w-[100%] h-[500px] grid items-center grid-rows-2 bg-[#101822] grid-flow-col overflow-auto' onClick={() => setDeletOpen(false)}>
+                <div className='w-[100%] h-[500px] grid items-center grid-rows-2 bg-[#ADBBDA] grid-flow-col overflow-auto' >
                     {
                         task.map((e, index) => {
                             return (
 
 
-                                <div key={index} className=' w-[300px] h-[200px] bg-[#ffffff] ml-10 flex flex-col justify-between items-center rounded-xl shadow-xl shadow-black'>
+                                <div key={index} className=' w-[300px] h-[200px] bg-[#EDE8F5] ml-10 flex flex-col justify-between items-center rounded-xl shadow-md shadow-blck'>
                                     <div className='overflow-auto w-[200px] mt-6 h-[130px]'>
                                         {e}
                                     </div>
                                     <div className='flex h-[20%] items-center  '>
-                                        <button className='h-5 flex rounded  shadow-sm shadow-black bg-black font-extralight justify-center items-center'
+                                        <button className='h-5 flex rounded   shadow-black bg-[#7091E6] hover:bg-[#3D52A0]  hover:bg-[#3D52A0]k font-bold justify-center items-center'
                                             onClick={() => deletTask(index)}
                                         >Delet</button>
-                                        <button className='h-5 flex rounded  shadow-sm shadow-black bg-black font-extralight justify-center items-center'
+                                        <button className='h-5 flex rounded  shadow-black bg-[#7091E6] hover:bg-[#3D52A0] font-bold justify-center items-center'
                                             onClick={() => handleEdite(index)}>Edit</button>
-                                        <button className='h-5 flex rounded  shadow-sm shadow-black bg-black font-extralight justify-center items-center'
+                                        <button className='h-5 flex rounded   shadow-black bg-[#7091E6] hover:bg-[#3D52A0] font-bold justify-center items-center'
                                             onClick={() => handleCompleat(index)}>Compleat</button>
                                     </div>
                                 </div>
@@ -149,8 +149,8 @@ const Todo = () => {
                 {
                     doneTask.map((done, did) => {
                         return (
-                            <div key={did} className='flex justify-center items-center ml-5 w-[400px] h-[50px] mt-2  bg-[#ffffff] rounded-md shadow-sm shadow-black'
-                            >{done}</div>
+                            <div key={did} className='flex justify-center items-center ml-5 w-[400px] h-[50px] mt-2 text-white bg-[#8697C4] rounded-md shadow-sm shadow-black overflow-auto'
+                            ><del>{done}</del></div>
                         )
                     })
                 }
