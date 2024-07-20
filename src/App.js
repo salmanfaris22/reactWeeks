@@ -30,7 +30,7 @@ function App() {
       <ContionalRen/>
       <Key/>
       <Events/>
-      <FechApi/>
+      {/* <FechApi/> */}
       <UserRef/>
      <PrevState/>
    

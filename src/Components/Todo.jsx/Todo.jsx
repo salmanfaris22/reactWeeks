@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import DeletedTasks from './DeleteTAsks/DeletedTasks'
+import ToDoinput from './ToDoinput/ToDoinput'
 
 const Todo = () => {
 
@@ -6,6 +8,8 @@ const Todo = () => {
     const [newTask, setNewTask] = useState("")
     const [editIndex, setEditIndex] = useState(null)
     const [doneTask, setDonetask] = useState([])
+    const [deletedTask, setdeletedTask] = useState([])
+    const [deletOpen, setDeletOpen] = useState(false)
 
 
     function handleChange(e) {
@@ -15,7 +19,7 @@ const Todo = () => {
 
     function handleGetData() {
         if (newTask.trim().length !== 0) {
-            console.log(newTask);
+
             SetTask([...task, newTask])
             setNewTask("")
         }
@@ -40,6 +44,10 @@ const Todo = () => {
 
     }
     function deletTask(index) {
+        const deleted = task.filter((task, i) => i === index)
+        setdeletedTask([...deletedTask, deleted])
+
+
         const updatedTask = task.filter((task, i) => i !== index)
         SetTask(updatedTask)
     }
@@ -51,29 +59,34 @@ const Todo = () => {
         setDonetask([...doneTask, moveCompleat])
 
 
+
+
+    }
+    function handelRestoreTask(index) {
+        const resored = deletedTask.filter((task, i) => i === index)
+        SetTask([...task, resored])
+        const updatedTasks = deletedTask.filter((task, i) => i !== index)
+        console.log(updatedTasks);
+        setdeletedTask(updatedTasks)
+    }
+
+
+    function handelDeletOpen() {
+        setDeletOpen(!deletOpen)
+        console.log(deletOpen);
     }
 
     return (
         <div className='flex flex-col  h-[100vh] bg-[#101820]'>
             <div className='w-[100%] h-[20%] rounded-xl flex flex-col justify-center items-center'>
                 <div>
-                    <input type="text" className=' p-3 w-[600px] shadow-sm shadow-black rounded-xl'
-                        name='data'
-                        // value={getData} 
-                        onChange={handleChange}
-                        value={newTask}
-                        placeholder='Enter Your Todo'
-                        id='task'
-                        autoFocus
-                    />
-                    {
-                        editIndex === null ? <button onClick={handleGetData} className='ml-4 bg-white text-black font-bold'
-                            type='submit'
-                        >ADD</button> :
-                            <button onClick={() => handleEditData()} className='ml-4'
-                                type='edit'
-                            >Eidit</button>
-                    }
+                  <ToDoinput/>
+                    <button className=' absolute right-0  bg-black' onClick={handelDeletOpen}>DeletedTasks</button>
+                    <div className='absolute right-0 '>
+                        {deletOpen && <DeletedTasks deletedTask={deletedTask} handelRestoreTask={handelRestoreTask}/>}
+
+                    </div>
+
                 </div>
 
 
@@ -81,14 +94,14 @@ const Todo = () => {
 
             <div>
 
-                <div className='w-[100%] h-[500px] grid items-center grid-rows-2 bg-[#101822] grid-flow-col' >
+                <div className='w-[100%] h-[500px] grid items-center grid-rows-2 bg-[#101822] grid-flow-col overflow-auto' onClick={() => setDeletOpen(false)}>
                     {
                         task.map((e, index) => {
                             return (
 
 
-                                <div key={index} className='w-[300px] h-[200px] bg-[#ffffff] ml-10 flex flex-col justify-between items-center rounded-xl shadow-xl shadow-black'>
-                                    <div className='w-[200px] mt-6 h-[130px]'>
+                                <div key={index} className=' w-[300px] h-[200px] bg-[#ffffff] ml-10 flex flex-col justify-between items-center rounded-xl shadow-xl shadow-black'>
+                                    <div className='overflow-auto w-[200px] mt-6 h-[130px]'>
                                         {e}
                                     </div>
                                     <div className='flex h-[20%] items-center  '>
@@ -121,7 +134,7 @@ const Todo = () => {
             <div className='ml-9 mt-10 text-2xl font-bold text-white'>Compleated TASK</div>
             <br />
 
-            <div className=' w-[100%] h-[450px] grid items-center grid-rows-5 grid-flow-col' >
+            <div className=' w-[100%] h-[450px] grid items-center grid-rows-2 grid-flow-col overflow-auto' >
                 {
                     doneTask.map((done, did) => {
                         return (
