@@ -11,6 +11,7 @@ const FechApi = () => {
             .then((data) => data.json())
             .then((data) => data.quotes)
             .then((data) => setPost(data.splice(0, 10)))
+            .catch((error)=>console.log(error))
     }, [])
 
     return (

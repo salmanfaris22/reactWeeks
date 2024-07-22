@@ -12,6 +12,7 @@ import Proms from './Components/probs/Proms';
 import SwitchTheme from './Components/SwitchTheme/SwitchTheme';
 import Textin from './Components/Textin';
 import Todo from './Components/Todo.jsx/Todo';
+import TOTODo from './Components/Todo.jsx/Todo2/TOTODo';
 import PrevState from './Components/userRef/PrevState';
 import UserRef from './Components/userRef/UserRef';
 import ValidFrom from './Components/ValidFrom/ValidFrom';
@@ -21,21 +22,24 @@ function App() {
   return (
     <div className="App">
       {/* <Textin name="jasim" age={3} st={true}/> */}
-    <Navbar/>
-      <Hero/>
-      <About/>
-      <SwitchTheme/>
-      <Proms/>
-      <ColorInput/>
-      <ContionalRen/>
-      <Key/>
-      <Events/>
-      {/* <FechApi/> */}
-      <UserRef/>
-     <PrevState/>
+      <Navbar />
+      <Hero />
+      <About />
+      <SwitchTheme />
+
+      <Proms />
+      <ColorInput />
+      <ContionalRen />
+      <Key />
+      <Events />
+      <FechApi />
+      <UserRef />
+      <PrevState />
    
-      <ValidFromMyself/>
-      <Todo/>
+      <ValidFromMyself />
+      <Todo />
+      <TOTODo/>
+  
 
     </div>
   );
