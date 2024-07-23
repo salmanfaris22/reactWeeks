@@ -9,6 +9,8 @@ import Hero from './Components/Hero/Hero';
 import Key from './Components/Key/Key';
 import Navbar from './Components/navbar/Navbar';
 import Proms from './Components/probs/Proms';
+import Sample from './Components/Sample';
+import SampleProps from './Components/SampleProps';
 
 import SwitchTheme from './Components/SwitchTheme/SwitchTheme';
 
@@ -22,6 +24,9 @@ import ValidFromMyself from './Components/ValidFrom/ValidFromMyself';
 function App() {
   return (
     <div className="App">
+      {/* <Sample/>
+      <ProgressEvent/> */}
+      {/* <SampleProps/> */}
       {/* <Textin name="jasim" age={3} st={true}/> */}
       <Navbar />
       <Hero />

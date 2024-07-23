@@ -10,12 +10,15 @@ const [num, setNum] = useState(0)
 const ingrement = ()=>{
   setNum(num+1)
 }
+
 const decrement = ()=>{
   setNum(num-1)
 }
+
 const reset = ()=>{
   setNum(0)
 }
+
 
   return (
     <div className='about-main'>

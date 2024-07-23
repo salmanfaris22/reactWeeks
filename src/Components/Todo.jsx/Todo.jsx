@@ -43,6 +43,7 @@ const Todo = () => {
         const deleted = task.filter((task, i) => i === index)
         setdeletedTask([...deletedTask, deleted])
 
+        
 
         const updatedTask = task.filter((task, i) => i !== index)
         SetTask(updatedTask)
