@@ -9,8 +9,9 @@ import Hero from './Components/Hero/Hero';
 import Key from './Components/Key/Key';
 import Navbar from './Components/navbar/Navbar';
 import Proms from './Components/probs/Proms';
+
 import SwitchTheme from './Components/SwitchTheme/SwitchTheme';
-import Textin from './Components/Textin';
+
 import Todo from './Components/Todo.jsx/Todo';
 import TOTODo from './Components/Todo.jsx/Todo2/TOTODo';
 import PrevState from './Components/userRef/PrevState';
