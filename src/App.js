@@ -7,6 +7,7 @@ import Events from './Components/Events/Events';
 import FechApi from './Components/FechApis/FechApi';
 import Validation from './Components/FormVallidation/Validation';
 import Hero from './Components/Hero/Hero';
+import JsonRect from './Components/Json/JsonRect';
 import Key from './Components/Key/Key';
 import Navbar from './Components/navbar/Navbar';
 import Proms from './Components/probs/Proms';
@@ -50,7 +51,7 @@ function App() {
       <TOTODo/>
       <Usereaducer/>
   
-
+   <JsonRect/>
     </div>
   );
 }
