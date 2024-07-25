@@ -19,6 +19,7 @@ import SwitchTheme from './Components/SwitchTheme/SwitchTheme';
 import Todo from './Components/Todo.jsx/Todo';
 import TOTODo from './Components/Todo.jsx/Todo2/TOTODo';
 import PrevState from './Components/userRef/PrevState';
+import Context from './Components/userRef/useContext/Context';
 import Usereaducer from './Components/userRef/Usereaducer';
 import UserRef from './Components/userRef/UserRef';
 import ValidFrom from './Components/ValidFrom/ValidFrom';
@@ -50,8 +51,8 @@ function App() {
       <Todo />
       <TOTODo/>
       <Usereaducer/>
-  
-   <JsonRect/>
+  <Context/>
+   {/* <JsonRect/> */}
     </div>
   );
 }
