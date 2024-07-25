@@ -4,15 +4,12 @@ const TOTODo = () => {
 
     const [todo, setTodo] = useState([])
     const [get, setGet] = useState("")
-
-
-
+    
+    
     function handleinputTod(e) {
         setGet(e.target.value)
 
     }
-
-
     function handleGetSetTodo() {
         if (get.trim().length !== 0) {
             setTodo([...todo, get])
@@ -20,15 +17,11 @@ const TOTODo = () => {
 
         setGet("")
     }
-
     function deliteTodoData(index) {
         const dele = todo.filter((e, i) => i !== index)
         setTodo(dele)
     }
-
-
-
-
+    
     return (
         <div className='h-[100vh] flex items-center flex-col'>
             <div>

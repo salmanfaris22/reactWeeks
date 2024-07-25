@@ -5,6 +5,7 @@ import ColorInput from './Components/Color2/ColorInput';
 import ContionalRen from './Components/ContionRendering/ContionalRen';
 import Events from './Components/Events/Events';
 import FechApi from './Components/FechApis/FechApi';
+import Validation from './Components/FormVallidation/Validation';
 import Hero from './Components/Hero/Hero';
 import Key from './Components/Key/Key';
 import Navbar from './Components/navbar/Navbar';
@@ -25,6 +26,7 @@ import ValidFromMyself from './Components/ValidFrom/ValidFromMyself';
 function App() {
   return (
     <div className="App">
+      <Validation/>
       {/* <Sample/>
       <ProgressEvent/> */}
       {/* <SampleProps/> */}
