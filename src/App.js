@@ -10,6 +10,7 @@ import Validation from './Components/FormVallidation/Validation';
 import Hero from './Components/Hero/Hero';
 import JsonRect from './Components/Json/JsonRect';
 import Key from './Components/Key/Key';
+import Laziyloading from './Components/LaziyLoading/Laziyloading';
 import Navbar from './Components/navbar/Navbar';
 import Proms from './Components/probs/Proms';
 import Sample from './Components/Sample';
@@ -29,12 +30,13 @@ import ValidFromMyself from './Components/ValidFrom/ValidFromMyself';
 function App() {
   return (
     <div className="App">
-      <Validation/>
+      <Laziyloading/>
+      {/* <Validation/>
       {/* <Sample/>
       <ProgressEvent/> */}
       {/* <SampleProps/> */}
       {/* <Textin name="jasim" age={3} st={true}/> */}
-      <Navbar />
+      {/* <Navbar />
       <Hero />
       <About />
       <SwitchTheme />
@@ -51,9 +53,9 @@ function App() {
       <ValidFromMyself />
       <Todo />
       <TOTODo/>
-      <Usereaducer/>
-  <Context/>
-  <UseFromss/>
+      <Usereaducer/> */}
+  {/* <Context/>
+  <UseFromss/>  */}
    {/* <JsonRect/> */}
     </div>
   );
