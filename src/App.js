@@ -29,6 +29,7 @@ import ValidFrom from './Components/ValidFrom/ValidFrom';
 import ValidFromMyself from './Components/ValidFrom/ValidFromMyself';
 
 const LazyUSer =lazy(()=> import("./Components/LaziyLoading/Laziyloading"))
+const  Ref = lazy(()=> import("./Components/userRef/UserRef"))
 
 function App() {
   return (
@@ -53,8 +54,13 @@ function App() {
       <ContionalRen />
       <Key />
       <Events />
-      <FechApi />
-      <UserRef />
+   
+
+<Suspense fallback={<div className='h-[100vh] bg-red-500'>loadinf.......</div>}>
+   <Ref />
+</Suspense>
+      
+
       <PrevState />
    
       <ValidFromMyself />
