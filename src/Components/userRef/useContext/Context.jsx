@@ -10,7 +10,7 @@ const Context = () => {
     <div className='h-[100vh]'>
       parent
   <Ab.Provider  value={"hyyyyyyyy"}>
-  <Context1/>
+       <Context1/>
   </Ab.Provider>
   
     </div>

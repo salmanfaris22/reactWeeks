@@ -22,6 +22,8 @@ function valueReduce(prevState , action){
         return {
             ...prevState,
             number:0
+
+            
         }        
    }
 }

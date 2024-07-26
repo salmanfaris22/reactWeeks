@@ -3,6 +3,7 @@ import './App.css';
 import About from './Components/about/about';
 import ColorInput from './Components/Color2/ColorInput';
 import ContionalRen from './Components/ContionRendering/ContionalRen';
+import UseFromss from './Components/CoustemHooks/UseFromss';
 import Events from './Components/Events/Events';
 import FechApi from './Components/FechApis/FechApi';
 import Validation from './Components/FormVallidation/Validation';
@@ -52,6 +53,7 @@ function App() {
       <TOTODo/>
       <Usereaducer/>
   <Context/>
+  <UseFromss/>
    {/* <JsonRect/> */}
     </div>
   );

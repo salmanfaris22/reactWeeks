@@ -6,7 +6,7 @@ const Context1 = () => {
     <div>
       page 2
 
-      <Context2/>
+      <Context2 />
     </div>
   )
 }
