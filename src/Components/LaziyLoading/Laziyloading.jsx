@@ -1,7 +1,10 @@
 import axios from 'axios'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Laziyloading = () => {
+
+
+
 
 const [image,  setImage] =useState([])
 
@@ -18,21 +21,21 @@ useEffect(()=>{
   
 },[])
    
-const triggerRef = useRef(null)
+
   return (
     <div>Laziyloading
     <div className='grid grid-cols-6 gap-3'>
         {
-            image.map((e)=>{
+            image.map((e,i)=>{
                 return(
-                    <div>
+                    <div key={i}>
                         <div><img src={e.url} alt="" /></div>
                     </div>
                 )
             })
         }
     </div>
-        <div ref={triggerRef}></div>
+
     </div>
   )
 }

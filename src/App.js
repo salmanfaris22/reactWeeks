@@ -1,4 +1,5 @@
 
+import { lazy, Suspense } from 'react';
 import './App.css';
 import About from './Components/about/about';
 import ColorInput from './Components/Color2/ColorInput';
@@ -27,15 +28,19 @@ import UserRef from './Components/userRef/UserRef';
 import ValidFrom from './Components/ValidFrom/ValidFrom';
 import ValidFromMyself from './Components/ValidFrom/ValidFromMyself';
 
-
+const LazyUSer =lazy(()=> import("./Components/LaziyLoading/Laziyloading"))
 
 function App() {
   return (
     <div className="App">
-      <Laziyloading/>
+      {/* <Laziyloading/> */}
       <Validation/>
        <Sample/>
+       <Suspense fallback={<div className='h-[100vh] bg-red-500'>loadinf.......</div>}>
+       <LazyUSer/>
+       </Suspense>
       {/* <ProgressEvent/> */}
+  
        <SampleProps/> 
       {/* <Textin name="jasim" age={3} st={true}/> */}
       <Navbar />
