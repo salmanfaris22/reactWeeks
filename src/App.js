@@ -27,16 +27,18 @@ import UserRef from './Components/userRef/UserRef';
 import ValidFrom from './Components/ValidFrom/ValidFrom';
 import ValidFromMyself from './Components/ValidFrom/ValidFromMyself';
 
+
+
 function App() {
   return (
     <div className="App">
       <Laziyloading/>
-      {/* <Validation/>
-      {/* <Sample/>
-      <ProgressEvent/> */}
-      {/* <SampleProps/> */}
+      <Validation/>
+       <Sample/>
+      {/* <ProgressEvent/> */}
+       <SampleProps/> 
       {/* <Textin name="jasim" age={3} st={true}/> */}
-      {/* <Navbar />
+      <Navbar />
       <Hero />
       <About />
       <SwitchTheme />
@@ -53,10 +55,10 @@ function App() {
       <ValidFromMyself />
       <Todo />
       <TOTODo/>
-      <Usereaducer/> */}
-  {/* <Context/>
-  <UseFromss/>  */}
-   {/* <JsonRect/> */}
+      <Usereaducer/>
+  <Context/>
+  <UseFromss/> 
+   <JsonRect/>
     </div>
   );
 }
