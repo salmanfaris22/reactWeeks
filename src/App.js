@@ -27,6 +27,7 @@ import Usereaducer from './Components/userRef/Usereaducer';
 import UserRef from './Components/userRef/UserRef';
 import ValidFrom from './Components/ValidFrom/ValidFrom';
 import ValidFromMyself from './Components/ValidFrom/ValidFromMyself';
+import Memo from './Components/Memo/Memo';
 
 const LazyUSer =lazy(()=> import("./Components/LaziyLoading/Laziyloading"))
 const  Ref = lazy(()=> import("./Components/userRef/UserRef"))
@@ -60,7 +61,7 @@ function App() {
    <Ref />
 </Suspense>
       
-
+<Memo/>
       <PrevState />
    
       <ValidFromMyself />
