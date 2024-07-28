@@ -28,7 +28,9 @@ import UserRef from './Components/userRef/UserRef';
 import ValidFrom from './Components/ValidFrom/ValidFrom';
 import ValidFromMyself from './Components/ValidFrom/ValidFromMyself';
 import Memo from './Components/Memo/Memo';
-import UseCallBack from './Component2/useCallBack';
+import UseCallback from './Component2/useCallBack/useCallback';
+import UseMemo from './Component2/useMemo/UseMemo';
+
 
 const LazyUSer =lazy(()=> import("./Components/LaziyLoading/Laziyloading"))
 const  Ref = lazy(()=> import("./Components/userRef/UserRef"))
@@ -37,8 +39,8 @@ function App() {
   return (
     <div className="App">
 
- <UseCallBack/>
-
+<UseCallback/>
+<UseMemo/>
 
       {/* <Laziyloading/> */}
       {/* <Validation/>
