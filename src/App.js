@@ -28,6 +28,7 @@ import UserRef from './Components/userRef/UserRef';
 import ValidFrom from './Components/ValidFrom/ValidFrom';
 import ValidFromMyself from './Components/ValidFrom/ValidFromMyself';
 import Memo from './Components/Memo/Memo';
+import UseCallBack from './Component2/useCallBack';
 
 const LazyUSer =lazy(()=> import("./Components/LaziyLoading/Laziyloading"))
 const  Ref = lazy(()=> import("./Components/userRef/UserRef"))
@@ -35,17 +36,21 @@ const  Ref = lazy(()=> import("./Components/userRef/UserRef"))
 function App() {
   return (
     <div className="App">
+
+ <UseCallBack/>
+
+
       {/* <Laziyloading/> */}
-      <Validation/>
+      {/* <Validation/>
        <Sample/>
        <Suspense fallback={<div className='h-[100vh] bg-red-500'>loadinf.......</div>}>
        <LazyUSer/>
-       </Suspense>
+       </Suspense> */}
       {/* <ProgressEvent/> */}
   
-       <SampleProps/> 
+       {/* <SampleProps/>  */}
       {/* <Textin name="jasim" age={3} st={true}/> */}
-      <Navbar />
+      {/* <Navbar />
       <Hero />
       <About />
       <SwitchTheme />
@@ -54,10 +59,10 @@ function App() {
       <ColorInput />
       <ContionalRen />
       <Key />
-      <Events />
+      <Events /> */}
    
 
-<Suspense fallback={<div className='h-[100vh] bg-red-500'>loadinf.......</div>}>
+{/* <Suspense fallback={<div className='h-[100vh] bg-red-500'>loadinf.......</div>}>
    <Ref />
 </Suspense>
       
@@ -70,7 +75,7 @@ function App() {
       <Usereaducer/>
   <Context/>
   <UseFromss/> 
-   <JsonRect/>
+   <JsonRect/> */}
     </div>
   );
 }
