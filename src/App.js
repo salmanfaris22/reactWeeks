@@ -30,6 +30,8 @@ import ValidFromMyself from './Components/ValidFrom/ValidFromMyself';
 import Memo from './Components/Memo/Memo';
 import UseCallback from './Component2/useCallBack/useCallback';
 import UseMemo from './Component2/useMemo/UseMemo';
+import HigherOC from './Component2/HOC/HigherOC';
+import Reduce from './Component2/Usereducer/Reduce';
 
 
 const LazyUSer =lazy(()=> import("./Components/LaziyLoading/Laziyloading"))
@@ -38,10 +40,10 @@ const  Ref = lazy(()=> import("./Components/userRef/UserRef"))
 function App() {
   return (
     <div className="App">
-
-<UseCallback/>
-<UseMemo/>
-
+<Reduce/>
+{/* <UseCallback/> */}
+{/* <UseMemo/> */}
+{/* <HigherOC/> */}
       {/* <Laziyloading/> */}
       {/* <Validation/>
        <Sample/>
