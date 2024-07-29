@@ -32,6 +32,8 @@ import UseCallback from './Component2/useCallBack/useCallback';
 import UseMemo from './Component2/useMemo/UseMemo';
 import HigherOC from './Component2/HOC/HigherOC';
 import Reduce from './Component2/Usereducer/Reduce';
+import Contextt from './Component2/useContext/Context';
+import CoustemHook from './Component2/CoutesmHook/CoustemHook';
 
 
 const LazyUSer =lazy(()=> import("./Components/LaziyLoading/Laziyloading"))
@@ -40,7 +42,13 @@ const  Ref = lazy(()=> import("./Components/userRef/UserRef"))
 function App() {
   return (
     <div className="App">
-<Reduce/>
+<CoustemHook/>
+
+
+{/* <Contextt /> */}
+
+
+{/* <Reduce/> */}
 {/* <UseCallback/> */}
 {/* <UseMemo/> */}
 {/* <HigherOC/> */}
