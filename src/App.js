@@ -33,6 +33,7 @@ import HigherOC from "./Component2/HOC/HigherOC";
 import Reduce from "./Component2/Usereducer/Reduce";
 import Contextt from "./Component2/useContext/Context";
 import CoustemHook from "./Component2/CoutesmHook/CoustemHook";
+import ReactMemo from "./Component2/Reactmemo/ReactMemo";
 // import LazyLoadsss from "./Component2/LazyLoading/LazyLoad";
 // import LazyLoad from './Component2/LazyLoading/LazyLoad';
 
@@ -45,11 +46,12 @@ function App() {
   return (
     <div className="App">
       {/* <CoustemHook/> */}
-      <Suspense
+      <ReactMemo/>
+      {/* <Suspense
         fallback={<div className="h-[100vh] bg-red-500">loadinf.......</div>}
       >
     <LazyLoadsss/>
-      </Suspense>
+      </Suspense> */}
 
       {/* <Contextt /> */}
 
