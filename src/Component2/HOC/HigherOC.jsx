@@ -1,12 +1,9 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
-import UserList from './UserList'
+import React from 'react'
 
 const HigherOC = () => {
-
   return (
-    <div>HigherOC
- <UserList/>
+    <div>
+      
     </div>
   )
 }

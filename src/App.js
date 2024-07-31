@@ -46,7 +46,7 @@ function App() {
   return (
     <div className="App">
       {/* <CoustemHook/> */}
-      <ReactMemo/>
+      {/* <ReactMemo/> */}
       {/* <Suspense
         fallback={<div className="h-[100vh] bg-red-500">loadinf.......</div>}
       >
@@ -57,7 +57,7 @@ function App() {
 
       {/* <Reduce/> */}
       {/* <UseCallback/> */}
-      {/* <UseMemo/> */}
+      <UseMemo/>
       {/* <HigherOC/> */}
       {/* <Laziyloading/> */}
       {/* <Validation/>
