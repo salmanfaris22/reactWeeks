@@ -1,100 +1,28 @@
-import { lazy, Suspense } from "react";
-import "./App.css";
-import About from "./Components/about/about";
-import ColorInput from "./Components/Color2/ColorInput";
-import ContionalRen from "./Components/ContionRendering/ContionalRen";
-import UseFromss from "./Components/CoustemHooks/UseFromss";
-import Events from "./Components/Events/Events";
-import FechApi from "./Components/FechApis/FechApi";
-import Validation from "./Components/FormVallidation/Validation";
-import Hero from "./Components/Hero/Hero";
-import JsonRect from "./Components/Json/JsonRect";
-import Key from "./Components/Key/Key";
-import Laziyloading from "./Components/LaziyLoading/Laziyloading";
-import Navbar from "./Components/navbar/Navbar";
-import Proms from "./Components/probs/Proms";
-import Sample from "./Components/Sample";
-import SampleProps from "./Components/SampleProps";
 
-import SwitchTheme from "./Components/SwitchTheme/SwitchTheme";
-
-import Todo from "./Components/Todo.jsx/Todo";
-import TOTODo from "./Components/Todo.jsx/Todo2/TOTODo";
-import PrevState from "./Components/userRef/PrevState";
-import Context from "./Components/userRef/useContext/Context";
-import Usereaducer from "./Components/userRef/Usereaducer";
-import UserRef from "./Components/userRef/UserRef";
-import ValidFrom from "./Components/ValidFrom/ValidFrom";
-import ValidFromMyself from "./Components/ValidFrom/ValidFromMyself";
-import Memo from "./Components/Memo/Memo";
-import UseCallback from "./Component2/useCallBack/useCallback";
-import UseMemo from "./Component2/useMemo/UseMemo";
-import HigherOC from "./Component2/HOC/HigherOC";
-import Reduce from "./Component2/Usereducer/Reduce";
-import Contextt from "./Component2/useContext/Context";
-import CoustemHook from "./Component2/CoutesmHook/CoustemHook";
-import ReactMemo from "./Component2/Reactmemo/ReactMemo";
 // import LazyLoadsss from "./Component2/LazyLoading/LazyLoad";
 // import LazyLoad from './Component2/LazyLoading/LazyLoad';
 
-const LazyUSer = lazy(() => import("./Components/LaziyLoading/Laziyloading"));
-const Ref = lazy(() => import("./Components/userRef/UserRef"));
-const LazyLoadsss =lazy(()=>{
-  return import("./Component2/LazyLoading/LazyLoad")
-})
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AboutRount from "./Routing/AboutRount";
+import HomeRount from "./Routing/HomeRount";
+import { createContext, useContext } from "react";
+
+
 function App() {
+
+
   return (
-    <div className="App">
-      {/* <CoustemHook/> */}
-      {/* <ReactMemo/> */}
-      {/* <Suspense
-        fallback={<div className="h-[100vh] bg-red-500">loadinf.......</div>}
-      >
-    <LazyLoadsss/>
-      </Suspense> */}
 
-      {/* <Contextt /> */}
 
-      {/* <Reduce/> */}
-      {/* <UseCallback/> */}
-      <UseMemo/>
-      {/* <HigherOC/> */}
-      {/* <Laziyloading/> */}
-      {/* <Validation/>
-       <Sample/>
-       <Suspense fallback={<div className='h-[100vh] bg-red-500'>loadinf.......</div>}>
-       <LazyUSer/>
-       </Suspense> */}
-      {/* <ProgressEvent/> */}
+<BrowserRouter>
+  <Routes>
+  
+    <Route path="/" element={<HomeRount/>}/>
+    <Route path="about/:id" element={<AboutRount/>}/>
 
-      {/* <SampleProps/>  */}
-      {/* <Textin name="jasim" age={3} st={true}/> */}
-      {/* <Navbar />
-      <Hero />
-      <About />
-      <SwitchTheme />
+  </Routes>
+</BrowserRouter>
 
-      <Proms />
-      <ColorInput />
-      <ContionalRen />
-      <Key />
-      <Events /> */}
-
-      {/* <Suspense fallback={<div className='h-[100vh] bg-red-500'>loadinf.......</div>}>
-   <Ref />
-</Suspense>
-      
-<Memo/>
-      <PrevState />
-   
-      <ValidFromMyself />
-      <Todo />
-      <TOTODo/>
-      <Usereaducer/>
-  <Context/>
-  <UseFromss/> 
-   <JsonRect/> */}
-    </div>
   );
 }
 
